@@ -1,0 +1,8 @@
+@use "@/shared/styles/variables" as v;
+
+.root{
+    width: 100%;
+    height: 45px;
+    background-color: v.$black;
+}
+
