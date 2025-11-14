@@ -1,0 +1,32 @@
+@use "@/shared/styles/variables" as v;
+
+.filters {
+    margin-bottom: 40px;
+    padding: 15px;
+
+    color: v.$black;
+    height: 75%;
+    background-color: v.$light-grey;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price {
+    border: 1px solid v.$black ;
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 10px;
+
+    display: flex;
+    gap: 5px;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+

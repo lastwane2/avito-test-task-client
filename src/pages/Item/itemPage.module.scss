@@ -1,0 +1,20 @@
+@use "@/shared/styles/variables" as v;
+
+.upperPage {
+    display: flex;
+    justify-content: space-around;
+}
+
+.moderatingList {
+    width: 35%;
+    height: 300px;
+    border: 1px solid v.$black;
+    border-radius: 7px;
+}
+
+.buttonsContainer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}

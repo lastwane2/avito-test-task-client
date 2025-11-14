@@ -2,7 +2,26 @@
 
 .root{
     width: 100%;
-    height: 45px;
-    background-color: v.$black;
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: v.$light-grey;
+    background-color: v.$black;
+    height: 100%;
+}
+
+.navLink {
+    text-decoration: none;
+    color: v.$light-grey;
+}
+
+
+
 

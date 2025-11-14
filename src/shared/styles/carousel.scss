@@ -1,0 +1,19 @@
+/* Твои цвета */
+$black: #212529;
+$dark-grey: #343A40;
+$mid-grey: #495057;
+$middle-grey: #6C757D;
+$light-grey: #ADB5BD;
+
+.swiper-pagination-bullet {
+  background: $middle-grey !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $mid-grey !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $mid-grey !important;
+}
