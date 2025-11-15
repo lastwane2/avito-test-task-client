@@ -1,26 +1,46 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+interface IAdProps {
+    ad : {
+        id: number,
+        title: string,
+        price: number,
+        category: string,
+        status: "pending" | "approved" | "rejected" | "draft",
+        createdAt : string,
+        images: string[],
+        description?: string;
+        categoryId?: number;
+        updatedAt?: string;
+        seller?: any;
+        characteristics?: any;
+        moderationHistory?: any[];
+    }
+    
+}
 
-export const ItemCard = () => {
+export const ItemCard = (props : IAdProps) => {
+    const { ad } = props
+
     return(
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
                 sx={{ height: 140 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="green iguana"
+                image={ad.images[0]}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    Lizard
-                    -
-                    стоимость
+                    {ad.title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    Категория
+                    {ad.category}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    Дата
+                    Размещено: {ad.createdAt.slice(0, 10)}
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {ad.status}
                 </Typography>
             </CardContent>
             <CardActions>

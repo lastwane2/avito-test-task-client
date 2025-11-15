@@ -5,12 +5,16 @@ import App from '@/App';
 import { ThemeProvider } from '@mui/material';
 import { theme } from './app/theme';
 import "@/shared/styles/carousel.scss"
+import { store } from './app/store'
+import { Provider } from 'react-redux'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
-      <App/>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <App/>
+      </ThemeProvider>
+    </Provider>
   </StrictMode>,
 );
