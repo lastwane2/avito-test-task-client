@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+Проект для модерации объявлений на платформе Авито. Включает клиентскую часть на React/TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Стек технологий:
+- React 18 - современный фреймворк для построения пользовательских интерфейсов
+- TypeScript - статическая типизация для повышения надежности кода
+- Redux Toolkit - управление состоянием приложения
+- Material-UI - библиотека компонентов для быстрой разработки UI
+- React Router - маршрутизация в одностраничном приложении
+- Recharts - библиотека для построения графиков и диаграмм
+- Axios - HTTP-клиент для работы с API
+- Swiper - карусель для изображений объявлений
 
-Currently, two official plugins are available:
+### Запуск клиентской части
+1. **Клонирование репозитория**
+  git clone <repository-url>
+  cd avito-test-task-client
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. **Установка зависимочтей**
+   npm install
+   
+4. **Запуск в режиме разработки**
+   npm run dev
 
-## React Compiler
+Основные возможности приложения:
+- Просмотр списка объявлений с пагинацией и фильтрацией
+<img width="1906" height="918" alt="{D837E033-3A8E-412C-B4C1-E141A6274207}" src="https://github.com/user-attachments/assets/ceb687ff-c4c1-471b-a90c-bf9dfb107959" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Детальный просмотр объявления с изображениями, одобрение, отклонение и запрос доработки объявлений
+<img width="1909" height="913" alt="{0364D0EA-754C-483F-B187-BF7A07776C25}" src="https://github.com/user-attachments/assets/1c5b81b5-f23d-4597-aa8c-31e3cb26c386" />
 
-## Expanding the ESLint configuration
+- Статистика модерации с графиками
+<img width="1916" height="914" alt="{C26DE96A-3492-4756-BAD5-C3FA10D04FD5}" src="https://github.com/user-attachments/assets/003ca286-f7fe-4a42-b19d-36bf1ce4bb1e" />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- История модерации по каждому объявлению
+<img width="632" height="381" alt="{B6535B55-F110-4494-A310-0E10E2DF2E26}" src="https://github.com/user-attachments/assets/01dd787d-6e1e-44ad-bcde-57eb34c32114" />
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Обоснование выбора технологий:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+TypeScript
+  Выбран для повышения надежности кода благодаря статической типизации. Позволяет выявлять ошибки на этапе разработки, улучшает автодополнение и рефакторинг.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Redux Toolkit
+  Современный подход к управлению состоянием. Упрощает настройку Redux, уменьшает boilerplate код, включает встроенные лучшие практики.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Material-UI (MUI)
+  Ускоряет разработку за счет готовых, доступных и тестируемых компонентов. Соответствует современным стандартам дизайна, имеет отличную документацию.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Recharts
+  Простая и гибкая библиотека для визуализации данных. Легко настраивается, поддерживает различные типы графиков, хорошо работает с React.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+React Router
+  Стандартное решение для маршрутизации в React-приложениях. Простая настройка, поддержка вложенных маршрутов, хорошая интеграция с экосистемой React.
