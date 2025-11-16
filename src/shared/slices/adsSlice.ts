@@ -1,4 +1,5 @@
 import { API_URL } from '@/shared/api/constants';
+import { IAd } from '@/shared/types';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
 
@@ -14,22 +15,6 @@ interface AdsFilters {
     sortOrder?: string;
 }
 
-interface IAd {
-    id: number;
-    title: string;
-    price: number;
-    category: string;
-    status: "pending" | "approved" | "rejected" | "draft";
-    createdAt: string;
-    images: string[];
-    description?: string;
-    categoryId?: number;
-    updatedAt?: string;
-    seller?: any;
-    characteristics?: any;
-    moderationHistory?: any[];
-}
-
 export const getAds = createAsyncThunk(
     "ads/getAds",
     async (filters : AdsFilters) => {
@@ -39,7 +24,7 @@ export const getAds = createAsyncThunk(
         return response.data
     }
 )
-
+//добавляю карточку в глобальный стейт, для отображения ее в статистике, как последней отсмотренной
 export const getAdById = createAsyncThunk(
     "ads/getAdById",
     async (id: string) => {

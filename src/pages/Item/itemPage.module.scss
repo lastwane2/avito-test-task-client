@@ -1,15 +1,25 @@
 @use "@/shared/styles/variables" as v;
 
+.container {
+    margin-top: 40px;
+    padding: 0 80px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 .upperPage {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 300px;
 }
 
 .moderatingList {
     width: 35%;
-    height: 300px;
     border: 1px solid v.$black;
     border-radius: 7px;
+    overflow-y: scroll;
+    padding: 10px;
 }
 
 .buttonsContainer {
@@ -17,4 +27,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around
+}
+
+.moderatorContainer {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    position: fixed;
+    bottom: 45px;
+    left: 25px;
 }

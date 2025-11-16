@@ -31,7 +31,7 @@ export const ItemCard = (props : IAdProps) => {
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    {ad.title}
+                    {ad.title} - {ad.price} руб.
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {ad.category}
@@ -44,7 +44,7 @@ export const ItemCard = (props : IAdProps) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Link to="/item/1">
+                <Link to={`/item/${ad.id}`}>
                     <Button size="small">Открыть</Button>
                 </Link>
             </CardActions>
