@@ -1,1 +1,16 @@
+  modules:
+    - name: app
+      path: src/app/**
+      imports: [pages, widgets, shared]
 
+    - name: pages
+      path: src/pages/**
+      imports: [widgets, shared]
+
+    - name: widgets
+      path: src/widgets/**
+      imports: [shared]
+
+    - name: shared
+      path: src/shared/**
+      imports: []
