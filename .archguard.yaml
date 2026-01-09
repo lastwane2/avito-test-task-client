@@ -5,7 +5,7 @@
 
     - name: pages
       path: src/pages/**
-      imports: [widgets, shared]
+      imports: []
 
     - name: widgets
       path: src/widgets/**
