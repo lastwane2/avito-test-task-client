@@ -1,4 +1,4 @@
-modules:
+  modules:
     - name: app
       path: src/app/**
       imports: [pages, widgets, shared]
@@ -14,7 +14,3 @@ modules:
     - name: shared
       path: src/shared/**
       imports: []
-
-    - name: root
-      path: src/*.tsx
-      imports: [app, pages]
