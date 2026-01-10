@@ -1,11 +1,11 @@
-  modules:
+modules:
     - name: app
       path: src/app/**
       imports: [pages, widgets, shared]
 
     - name: pages
       path: src/pages/**
-      imports: []
+      imports: [widgets, shared]
 
     - name: widgets
       path: src/widgets/**
@@ -14,3 +14,7 @@
     - name: shared
       path: src/shared/**
       imports: []
+
+    - name: root
+      path: src/*.tsx
+      imports: [app, pages]
